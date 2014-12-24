@@ -9,6 +9,23 @@
     <link rel="stylesheet" href="assets/css/style.css"/>
 </head>
 <body>
+<header class="row" role="banner">
+    <h1 class="logo large-12 columns">
+        <a href="http://bernackiy.name/">
+            <img src="assets/img/logo.png" alt="alt">
+        </a>
+    </h1>
+</header>
+<aside id="search" role="search">
+    <form role="search" method="get" id="searchform" action="http://bernackiy.name/">
+        <div class="input">
+            <input type="text" value="" name="s" id="s" placeholder="Введите поисковый запрос...">
+        </div>
+        <div class="submit">
+            <input type="submit" class="postfix icon-search" id="searchsubmit" value="Search">
+        </div>
+    </form>
+</aside>
 <div class="row">
     <nav class="header_menu_wrapper">
         <ul class="header_menu" role="menu">
@@ -23,6 +40,11 @@
             </li>
         </ul>
     </nav>
+</div>
+<div class="row">
+    <div class="title">
+        <h1 ng-bind="title"></h1>
+    </div>
 </div>
 <div class="row" ui-view></div>
 <script src="node_modules/angular/angular.min.js"></script>
