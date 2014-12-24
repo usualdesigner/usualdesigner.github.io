@@ -1,4 +1,6 @@
-var mySite = angular.module('mySite', ['ui.router']);
+var AboutCtrl = function () {
+    var vm = this;
+}
 var ExperienceCtrl = function () {
     var vm = this;
     vm.list = [
@@ -50,12 +52,15 @@ var ContactCtrl = function () {
     vm.skype = 'bernackiy.name';
     vm.email = 'usualdesigner@gmail.com';
 }
+var mySite = angular.module('mySite', ['ui.router']);
 mySite.config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise("/about");
     $stateProvider
         .state('about', {
             url: "/about",
-            templateUrl: "templates/about.html"
+            templateUrl: "templates/about.html",
+            controller: AboutCtrl,
+            controllerAs: 'about'
         })
         .state('experience', {
             url: "/experience",
