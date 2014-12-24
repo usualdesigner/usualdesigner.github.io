@@ -1,5 +1,20 @@
-<li ng-repeat="one in experience.list">
-    {{one.company}}
-    {{one.position}}
-    {{one.range}}
-</li>
+<section id="maincolumn" class="fullwidth expirence">
+    <article class="row listRow" ng-repeat="one in experience.list">
+        <div class="listRowContent fullwidth">
+            <div class="row">
+                <div class="listRowContentTitle">
+                    <h2>
+                        <a class="changePage">
+                            {{one.range}}
+                        </a>
+                    </h2>
+                </div>
+                <div class="listRowContentPreview">
+                    <p></p>
+                    <p>{{one.company}}, {{one.position}}</p>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>

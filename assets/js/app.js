@@ -3,34 +3,44 @@ var ExperienceCtrl = function () {
     var vm = this;
     vm.list = [
         {
-            company: 'Bilberry',
+            company: 'Bilberry Software',
             position: 'Php developer',
-            range: '2013-2014'
+            range: '2013 – настоящее время'
         },
         {
-            company: 'Bilberry',
-            position: 'Php developer',
-            range: '2013-2014'
+            company: 'MosaicMedia',
+            position: 'php-программист',
+            range: '2012 – 2013 гг.'
         },
         {
-            company: 'Bilberry',
-            position: 'Php developer',
-            range: '2013-2014'
+            company: 'ООО Ковчег',
+            position: 'php программист',
+            range: '2011 – 2012 гг.'
         },
         {
-            company: 'Bilberry',
-            position: 'Php developer',
-            range: '2013-2014'
+            company: 'частный предприниматель',
+            position: 'php-программист',
+            range: '2009 – 2011 гг.'
         },
         {
-            company: 'Bilberry',
-            position: 'Php developer',
-            range: '2013-2014'
+            company: 'ЧП «БМТ-Стиль»',
+            position: 'системный администратор',
+            range: '2008 г.'
         },
         {
-            company: 'Bilberry',
-            position: 'Php developer',
-            range: '2013-2014'
+            company: 'ТОВ «Wanted Group»',
+            position: 'Web developer',
+            range: '2007-2008 гг.'
+        },
+        {
+            company: 'ТОВ «Ukrainian Journal»',
+            position: 'системный администратор',
+            range: '2007 г.'
+        },
+        {
+            company: 'Компания «КиевНЕТ»',
+            position: 'Инженер',
+            range: '2006 г.'
         },
     ];
 }
@@ -41,11 +51,11 @@ var ContactCtrl = function () {
     vm.email = 'usualdesigner@gmail.com';
 }
 mySite.config(function ($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise("/home");
+    $urlRouterProvider.otherwise("/about");
     $stateProvider
-        .state('home', {
-            url: "/home",
-            templateUrl: "templates/home.html"
+        .state('about', {
+            url: "/about",
+            templateUrl: "templates/about.html"
         })
         .state('experience', {
             url: "/experience",

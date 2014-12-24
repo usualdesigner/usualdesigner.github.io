@@ -6,12 +6,25 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/style.css"/>
 </head>
 <body>
-<a ui-sref="home">Home</a>
-<a ui-sref="experience">Experience</a>
-<a ui-sref="contact">Contact</a>
-<section ui-view></section>
+<div class="row">
+    <nav class="header_menu_wrapper">
+        <ul class="header_menu" role="menu">
+            <li ui-sref-active="current-menu-item">
+                <a ui-sref="about">About me</a>
+            </li>
+            <li ui-sref-active="current-menu-item">
+                <a ui-sref="experience">Experience</a>
+            </li>
+            <li ui-sref-active="current-menu-item">
+                <a ui-sref="contact">Contact</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<div class="row" ui-view></div>
 <script src="node_modules/angular/angular.min.js"></script>
 <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
 <script src="assets/js/app.js"></script>
