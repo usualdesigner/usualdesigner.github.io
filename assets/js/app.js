@@ -34,6 +34,12 @@ var ExperienceCtrl = function () {
         },
     ];
 }
+var ContactCtrl = function () {
+    var vm = this;
+    vm.phone = '+38 066 230-33-66';
+    vm.skype = 'bernackiy.name';
+    vm.email = 'usualdesigner@gmail.com';
+}
 mySite.config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise("/home");
     $stateProvider
@@ -49,6 +55,8 @@ mySite.config(function ($stateProvider, $urlRouterProvider) {
         })
         .state('contact', {
             url: "/contact",
-            templateUrl: "templates/contact.html"
+            templateUrl: "templates/contact.html",
+            controller: ContactCtrl,
+            controllerAs: 'contact'
         });
 });
