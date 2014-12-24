@@ -1,8 +1,10 @@
-var AboutCtrl = function () {
+var AboutCtrl = function ($rootScope) {
     var vm = this;
+    $rootScope.title = 'About';
 }
-var ExperienceCtrl = function () {
+var ExperienceCtrl = function ($rootScope) {
     var vm = this;
+    $rootScope.title = 'Experience';
     vm.list = [
         {
             company: 'Bilberry Software',
@@ -46,8 +48,9 @@ var ExperienceCtrl = function () {
         },
     ];
 }
-var ContactCtrl = function () {
+var ContactCtrl = function ($rootScope) {
     var vm = this;
+    $rootScope.title = 'Contact';
     vm.phone = '+38 066 230-33-66';
     vm.skype = 'bernackiy.name';
     vm.email = 'usualdesigner@gmail.com';
